@@ -11,7 +11,7 @@
   <p align="center">
     Paycoo empowers you to make digital payments without the need for an internet connection!
     <br />
-    <a href="#"><strong>Explore the docs »</strong></a>
+    <a href="#"><strong>Explore Paycoo Payment Gateway »</strong></a>
     <br />
     <br />
     <a href="#">Dashboard Demo</a>
