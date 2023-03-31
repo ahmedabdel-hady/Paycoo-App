@@ -52,6 +52,7 @@
         <li><a href="#app-build-&-release">App build & release</a></li>
       </ul>
     </li>   
+    <li><a href="#demo-access">Demo Access</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
