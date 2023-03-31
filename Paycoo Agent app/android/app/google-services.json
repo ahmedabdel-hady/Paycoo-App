@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "15435049887",
+    "project_id": "paycoo-app",
+    "storage_bucket": "paycoo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15435049887:android:24d1e91702d09b0340abaa",
+        "android_client_info": {
+          "package_name": "tech.geeksy.paycoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15435049887-3kckohk3s86kopjvh8f8c6o4mjli2hpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDHKPkNB-S7kokcotOWilhxk0f8CVBEPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15435049887-3kckohk3s86kopjvh8f8c6o4mjli2hpd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
