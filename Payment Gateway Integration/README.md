@@ -30,7 +30,10 @@ Paycoo offer a payment gateway that allows users to pay through their Paycoo wal
 
 To receive payment from customer as a merchant a user need to be registered as a merchant by Admin. Once admin registers and approves a merchant account then merchant can login to their panel. Merchant will get public key, secret key and merchant number from merchant panel in developers section.
 
-##Payment Page Flow:
+![image](https://user-images.githubusercontent.com/47082945/229163840-55dc558a-8154-4d6d-a42e-081e446ba372.png)
+
+
+## Payment Page Flow:
 
 - A payment page will be appeared for customer.
 - Customer will put their account number of ( payment gateway ) Paycoo
