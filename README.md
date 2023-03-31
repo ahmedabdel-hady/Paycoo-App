@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://paycoo.app">
-    <img src="logo.png" alt="Logo">
+    <img src="logo.png" width="200" alt="Logo">
   </a>
 
   <h3 align="center">Paycoo App</h3>
@@ -33,10 +33,23 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#prerequisites">Prerequisites</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#basics">Basics</a></li>
+        <li><a href="#server">Server</a></li>
+        <li><a href="#mobile-app">Mobile app</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#admin-panel">Admin Panel</a>
+      <ul>
+        <li><a href="#install-on-server">Install on server</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#mobile-app">Mobile App</a>
+      <ul>
+        <li><a href="#app-build-&-release">App build & release</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -53,7 +66,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div align="center">
+  <a href="https://paycoo.app">
+    <img src="app.png">
+  </a>
+</div>
 
 Paycoo is a versatile digital payment solution that caters to the needs of various businesses, including traditional stores and E-commerce platforms. Our application provides businesses with a range of financial solutions, including a digital wallet that enables them to order goods from retailers and earn points, as well as a seamless way to obtain digital invoices and link to any other system.
 For E-commerce platforms, we offer a payment gateway that allows users to pay through their Paycoo wallet or any other linked wallet while enjoying discount percentages or points. Our payment portal is designed to work smoothly and offers a way for users to pay even when they are not connected to the internet.
@@ -61,38 +78,92 @@ At Paycoo, we also prioritize the user's experience by providing them with uniqu
 Paycoo's innovative solutions and user-focused approach make it a leading player in the digital payment industry. We aim to provide businesses and individuals with a seamless, secure, and affordable payment experience that helps drive economic growth and financial inclusion.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [Flutter](https://flutter.dev/)
+* [Firebase](https://firebase.google.com/)
+* [PHP](https://www.php.net/)
+* [laravel](https://laravel.com/)
+* [Goolge Cloud](https://cloud.google.com/)
+* [Tensorflow](https://www.tensorflow.org/)
+* [MySQL](https://www.mysql.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Prerequisites
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+### Basics:
 
-### Prerequisites
+Paycoo is a comprehensive system that offers numerous modules for mobile applications. Additionally, it includes a dashboard that serves as an administrative hub for managing the content and overseeing the processes of the mobile app.
+- IDE for Mobile development, we preferred Android Studio and Xcode.
+- Flutter SDK and JDK with path setup in your IDE.
+- Real server Server related knowledge like apache or local machine server, we preferred to use a real server.
+- Server related knowledge and we preferred cPanel in your server for quick installation.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+### Server:
+
+- Paycoo requires PHP v8.2 and MySQL 5.7+
+- Mod_rewrite Apache
+- BCMath PHP extension
+- Ctype PHP, JSON, Mbstring, OpenSSL, PDO, Tokenizer, XML, Zip, Fileinfo, Gd, sodium Extension
+
+### Mobile app:
+
+- Android Studio
+- Flutter SDK setup (version 3.3.7 Stable)
+- JDK with path setup (only for vs code)
+- Xcode for IPA file build
+
+
+<!-- Admin Panel -->
+## Admin Panel
+
+### Install on server:
+
+#### Admin Panel Installation:
+
+Step 1: After download the code, upload the Dashboard-admin file in your server following your expected directory. paycoo admin panel can be installed on a domain or subdomain: For Example, yourdomain.com OR xyz.yourdomain.com.
+      Note: Paycoo requires an SSL certificate to be installed on your domain to work with all the services. 
+      
+Step 2: Create a new database from your server MYSQL database, As create a DB user to the database and link that database to the DB user.
+
+Step 3: Now you need to edit the  Database host, Database name, Database username, Database password, App Url to the .env file
+
+![image](https://user-images.githubusercontent.com/47082945/229144763-0343189c-c47c-42cc-90bb-314278b74055.png)        
+
+Step 4: go to the database again, and upload the our DB.sql file on it form import section in DB.
+
+
+
+<!-- Mobile App -->
+## Mobile App
+
+### App build & releaser:
+ - Don't forget to Setup the Mobile App Environment (Flutter).
+
+#### Build for Android:
+
+- For debug build you can run command:
+```sh
+flutter build apk
+   ```
+- You will get a larger merged apk with this. But you can split them with this command:
+```sh
+flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
+```
+- Build file location: ``` <project>/build/app/outputs/flutter-apk/ ```
+      
+
+#### Build for IOS:
+
+There are no general way to generate app for iOS. Apple doesn’t allow to install app like this debug way. If you want to install it on your iOS device then you have to deploy it on TestFlight or AppStore. For deploying it please follow this documentation: ``` https://docs.flutter.dev/deployment/ios ```
+- But you can test it on XCode simulator
+
+
+
 
 ### Installation
 
@@ -116,88 +187,35 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- Demo Test -->
+## Demo Access
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Dashboard Admin
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+- Go to [https://paycoo.geeksy.tech/](https://paycoo.geeksy.tech/)     
+  ```
+  Phone Number:"+201021192842"
+  Password:"12345678" 
+  ```
 
+### Mobile App
+
+- Downloud Paycoo App.apk    
+  ```
+  Phone Number:"+201021192842"
+  PIN:"2451" 
+  ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://paycoo.app/](https://paycoo.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -215,19 +233,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: app.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+
