@@ -11,12 +11,12 @@
   <p align="center">
     Paycoo empowers you to make digital payments without the need for an internet connection!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="#"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Dashboard Demo</a>
+    <a href="#">Dashboard Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Android App</a>
+    <a href="#">Android App</a>
   </p>
 </div>
 
