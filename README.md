@@ -68,10 +68,10 @@
   </a>
 </div>
 
-Paycoo is a versatile digital payment solution that caters to the needs of various businesses, including traditional stores and E-commerce platforms. Our application provides businesses with a range of financial solutions, including a digital wallet that enables them to order goods from retailers and earn points, as well as a seamless way to obtain digital invoices and link to any other system.
+- Paycoo is a versatile digital payment solution that caters to the needs of various businesses, including traditional stores and E-commerce platforms. Our application provides businesses with a range of financial solutions, including a digital wallet that enables them to order goods from retailers and earn points, as well as a seamless way to obtain digital invoices and link to any other system.
 For E-commerce platforms, we offer a payment gateway that allows users to pay through their Paycoo wallet or any other linked wallet while enjoying discount percentages or points. Our payment portal is designed to work smoothly and offers a way for users to pay even when they are not connected to the internet.
-At Paycoo, we also prioritize the user's experience by providing them with unique features not offered by other wallets. Users can link all other digital wallets in one application, send and receive financial transfers at lower prices than competitors even offline, and enjoy digital payment solutions from any site through our Paycoo payment gateway without the need for a Visa or Mastercard. Furthermore, users can withdraw money from any ATM or traditional stores located anywhere.
-Paycoo's innovative solutions and user-focused approach make it a leading player in the digital payment industry. We aim to provide businesses and individuals with a seamless, secure, and affordable payment experience that helps drive economic growth and financial inclusion.
+- At Paycoo, we also prioritize the user's experience by providing them with unique features not offered by other wallets. Users can link all other digital wallets in one application, send and receive financial transfers at lower prices than competitors even offline, and enjoy digital payment solutions from any site through our Paycoo payment gateway without the need for a Visa or Mastercard. Furthermore, users can withdraw money from any ATM or traditional stores located anywhere.
+- Paycoo's innovative solutions and user-focused approach make it a leading player in the digital payment industry. We aim to provide businesses and individuals with a seamless, secure, and affordable payment experience that helps drive economic growth and financial inclusion.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
