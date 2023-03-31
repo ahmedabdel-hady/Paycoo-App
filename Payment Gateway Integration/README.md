@@ -6,60 +6,10 @@
     <img src="logo.png" width="200" alt="Logo">
   </a>
 
-  <h3 align="center">Paycoo App</h3>
-
-  <p align="center">
-    Paycoo empowers you to make digital payments without the need for an internet connection!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Dashboard Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Android App</a>
-  </p>
+  <h3 align="center">Paycoo Payment Gateway Integration API</h3>
 </div>
 
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#prerequisites">Prerequisites</a>
-      <ul>
-        <li><a href="#basics">Basics</a></li>
-        <li><a href="#server">Server</a></li>
-        <li><a href="#mobile-app">Mobile app</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#admin-panel">Admin Panel</a>
-      <ul>
-        <li><a href="#install-on-server">Install on server</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#mobile-app">Mobile App</a>
-      <ul>
-        <li><a href="#app-build-&-release">App build & release</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 
 
@@ -72,165 +22,117 @@
   </a>
 </div>
 
-Paycoo is a versatile digital payment solution that caters to the needs of various businesses, including traditional stores and E-commerce platforms. Our application provides businesses with a range of financial solutions, including a digital wallet that enables them to order goods from retailers and earn points, as well as a seamless way to obtain digital invoices and link to any other system.
-For E-commerce platforms, we offer a payment gateway that allows users to pay through their Paycoo wallet or any other linked wallet while enjoying discount percentages or points. Our payment portal is designed to work smoothly and offers a way for users to pay even when they are not connected to the internet.
-At Paycoo, we also prioritize the user's experience by providing them with unique features not offered by other wallets. Users can link all other digital wallets in one application, send and receive financial transfers at lower prices than competitors even offline, and enjoy digital payment solutions from any site through our Paycoo payment gateway without the need for a Visa or Mastercard. Furthermore, users can withdraw money from any ATM or traditional stores located anywhere.
-Paycoo's innovative solutions and user-focused approach make it a leading player in the digital payment industry. We aim to provide businesses and individuals with a seamless, secure, and affordable payment experience that helps drive economic growth and financial inclusion.
+Paycoo offer a payment gateway that allows users to pay through their Paycoo wallet or any other linked wallet and enjoying discount percentages or points. Our payment portal is designed to work smoothly.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Built With
-
-* [Flutter](https://flutter.dev/)
-* [Firebase](https://firebase.google.com/)
-* [PHP](https://www.php.net/)
-* [laravel](https://laravel.com/)
-* [Goolge Cloud](https://cloud.google.com/)
-* [Tensorflow](https://www.tensorflow.org/)
-* [MySQL](https://www.mysql.com/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
-## Prerequisites
+## Process
 
-### Basics:
+To receive payment from customer as a merchant a user need to be registered as a merchant by Admin. Once admin registers and approves a merchant account then merchant can login to their panel. Merchant will get public key, secret key and merchant number from merchant panel in developers section.
 
-Paycoo is a comprehensive system that offers numerous modules for mobile applications. Additionally, it includes a dashboard that serves as an administrative hub for managing the content and overseeing the processes of the mobile app.
-- IDE for Mobile development, we preferred Android Studio and Xcode.
-- Flutter SDK and JDK with path setup in your IDE.
-- Real server Server related knowledge like apache or local machine server, we preferred to use a real server.
-- Server related knowledge and we preferred cPanel in your server for quick installation.
+##Payment Page Flow:
 
-### Server:
+- A payment page will be appeared for customer.
+- Customer will put their account number of ( payment gateway ) Paycoo
+- Then proceed to OTP page
 
-- Paycoo requires PHP v8.2 and MySQL 5.7+
-- Mod_rewrite Apache
-- BCMath PHP extension
-- Ctype PHP, JSON, Mbstring, OpenSSL, PDO, Tokenizer, XML, Zip, Fileinfo, Gd, sodium Extension
+![image](https://user-images.githubusercontent.com/47082945/229157776-89baf44f-e0b4-4408-9f32-f97c3de62f96.png)
 
-### Mobile app:
+![image](https://user-images.githubusercontent.com/47082945/229157842-e6cd4f24-b053-4137-a2aa-10a3f75e99b2.png)
 
-- Android Studio
-- Flutter SDK setup (version 3.3.7 Stable)
-- JDK with path setup (only for vs code)
-- Xcode for IPA file build
+![image](https://user-images.githubusercontent.com/47082945/229157864-29a4980c-c78e-44a7-8c60-d204f92efeef.png)
+
+![image](https://user-images.githubusercontent.com/47082945/229157907-dd6b33da-335a-40f9-af5a-75ce0cac2e25.png)
 
 
-<!-- Admin Panel -->
-## Admin Panel
+- After OTP verification customer will put their valid PIN number.
+- If customer balance is sufficient then customer will be sent to the success page.
 
-### Install on server:
+## Payment process from merchant website/shop:
 
-#### Admin Panel Installation:
+### Make a Payment:
 
-Step 1: After download the code, upload the Dashboard-admin file in your server following your expected directory. paycoo admin panel can be installed on a domain or subdomain: For Example, yourdomain.com OR xyz.yourdomain.com.
-      Note: Paycoo requires an SSL certificate to be installed on your domain to work with all the services. 
-      
-Step 2: Create a new database from your server MYSQL database, As create a DB user to the database and link that database to the DB user.
-
-Step 3: Now you need to edit the  Database host, Database name, Database username, Database password, App Url to the .env file
-
-![image](https://user-images.githubusercontent.com/47082945/229144763-0343189c-c47c-42cc-90bb-314278b74055.png)        
-
-Step 4: go to the database again, and upload the our DB.sql file on it form import section in DB.
-
-
-
-<!-- Mobile App -->
-## Mobile App
-
-### App build & releaser:
- - Don't forget to Setup the Mobile App Environment (Flutter).
-
-#### Build for Android:
-
-- For debug build you can run command:
+- First a payment order will be created in payment gateway server:
 ```sh
-flutter build apk
+#Make payment
+
+$url = 'BASE_URL/api/v1/create-payment-order';
+$amount = 'YOUR_AMOUNT';
+
+$response = Http::post($url, [
+    'public_key'=> 'YOUR_PUBLIC_KEY',
+    'secret_key'=> 'YOUR_SECRET_KEY',
+    'merchant_number'=> 'MERCHANT_NUMBER',
+    'amount'=> $amount,
+])->json();
+
+
+#Response
+
+if($response['status'] == 'merchant_not_found'){
+    //Merchant not found
+}
+
+if($response['status'] == 'payment_created'){
+    return redirect()->away($response['redirect_url']. '&callback=' . $URL_YOU_WANT_TO_REDIRECT_AFTER_PAYMENT_DONE);
+}
+
    ```
-- You will get a larger merged apk with this. But you can split them with this command:
+ 
+ 
+### Callback URL:
+
+Merchant can set a callback url from shop settings, once customer completes the payment process, a transaction summary will be generated and sent to the given callback url.
+
 ```sh
-flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
-```
-- Build file location: ``` <project>/build/app/outputs/flutter-apk/ ```
-      
-
-#### Build for IOS:
-
-There are no general way to generate app for iOS. Apple doesn’t allow to install app like this debug way. If you want to install it on your iOS device then you have to deploy it on TestFlight or AppStore. For deploying it please follow this documentation: ``` https://docs.flutter.dev/deployment/ios ```
-- But you can test it on XCode simulator
-
-
-
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+https://PROJECT_URL/callback
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Verification URL:
+
+Using transaction ID merchant website can verify payment for customer:
+
+```sh
+#Request
+
+$transaction_id = 'GET_TRANSACTION_ID_FROM_REQUEST';
+$payment_verification_url = 'https://paycoo.geeksy.tech/api/v1/payment-verification';
+
+$response = Http::post($payment_verification_url, [
+    'public_key'=> 'YOUR_PUBLIC_KEY',
+    'secret_key'=> 'YOUR_SECRET_KEY',
+    'merchant_number'=> 'MERCHANT_NUMBER',
+    'transaction_id' => $transaction_id,
+])->json();
+
+#Success Response
 
 
+{
+  "payment_record": {
+    "id": "6df7e156-69da-47d2-9d61-8464b4be0d42",
+    "merchant_user_id": 66,
+    "user_id": 57,
+    "transaction_id": "Y37tR1674562943",
+    "amount": 28,
+    "callback": "https://paycoo.geeksy.tech/callback",
+    "is_paid": 1,
+    "expired_at": "2023-01-24T12:27:12.000000Z",
+    "created_at": "2023-01-24T12:22:12.000000Z",
+    "updated_at": "2023-01-24T12:22:27.000000Z"
+  }
+}
 
-<!-- Demo Test -->
-## Demo Access
+#Error Response
 
-### Dashboard Admin
+{
+  "errors": [
+    {
+      "code": "error code",
+      "message": "error message will be here"
+    }
+  ]
+}
 
-- Go to [https://paycoo.geeksy.tech/](https://paycoo.geeksy.tech/)     
-  ```
-  Phone Number:"+201021192842"
-  Password:"12345678" 
-  ```
-
-### Mobile App
-
-- Downloud Paycoo App.apk    
-  ```
-  Phone Number:"+201021192842"
-  PIN:"2451" 
-  ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Project Link: [https://paycoo.app/](https://paycoo.app/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: app.png
-
+   ```
