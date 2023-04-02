@@ -59,7 +59,7 @@ To receive payment from customer as a merchant a user need to be registered as a
 ```sh
 #Make payment
 
-$url = 'BASE_URL/api/v1/create-payment-order';
+$url = 'https://paycoo.geeksy.tech/api/v1/create-payment-order';
 $amount = 'YOUR_AMOUNT';
 
 $response = Http::post($url, [
