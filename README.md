@@ -128,7 +128,7 @@ Step 2: Create a new database from your server MYSQL database, As create a DB us
 
 Step 3: Now you need to edit the  Database host, Database name, Database username, Database password, App Url to the .env file
 
-![image](https://user-images.githubusercontent.com/47082945/229144763-0343189c-c47c-42cc-90bb-314278b74055.png)        
+![image](https://user-images.githubusercontent.com/47082945/229426418-68df00ed-3a2b-4406-9190-06497956b771.png)        
 
 Step 4: go to the database again, and upload the our DB.sql file on it form import section in DB.
 
