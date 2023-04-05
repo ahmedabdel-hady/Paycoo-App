@@ -8,10 +8,7 @@ class AppConstants {
   static const String APP_NAME = 'Paycoo';
   //demo
   static const String BASE_URL = 'https://paycoo.geeksy.tech';
-  //
-  // static const String BASE_URL = 'https://6cash-admin.6am.one';
-  // //fun
-  // static const String BASE_URL = 'https://6cash-admin.6am.fun';
+  
   static const bool DEMO = true;
    static const double APP_VERSION = 2.1;
 
